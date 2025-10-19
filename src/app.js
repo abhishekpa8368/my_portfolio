@@ -198,7 +198,7 @@ export default function Portfolio() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-75 animate-pulse"></div>
                 <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-1 shadow-2xl">
-                  <img src="images/profilepoc.jpeg"alt="Abhishek Pal" 
+                  <img src="./images/profilepoc.jpeg"alt="Abhishek Pal" 
                     className="w-full rounded-3xl object-cover h-96"
                   />
                 </div>
