@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Pal — Odoo & Full Stack Developer</title>
+  <meta name="description" content="Abhishek Pal — Odoo ERP Developer & Full Stack Engineer specializing in Python, Django, PostgreSQL, Redis and AWS." />
+  <meta name="keywords" content="Abhishek Pal, Odoo Developer, Full Stack Engineer, Python, Django, JavaScript, AWS" />
+  <meta property="og:title" content="Abhishek Pal — DEV OS Portfolio" />
+  <meta property="og:description" content="Odoo ERP Developer & Full Stack Engineer with expertise in Python, Django, and cloud solutions." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Splitting.js -->
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-line"><span class="prompt">$</span> <span id="loader-text-1"></span></div>
+      <div class="loader-line"><span class="prompt">$</span> <span id="loader-text-2"></span></div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <div class="loader-checks" id="loader-checks"></div>
+      <div class="loader-line"><span id="loader-ready"></span><span class="blink-cursor">█</span></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Particle canvas background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="logo">
+      <img src="/photo.jpeg" alt="Abhishek Pal" class="nav-photo" />
+      <span class="nav-name">Abhishek Pal<span class="cursor-blink">_</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#skills" class="nav-link">SKILLS</a></li>
+      <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+      <li><a href="#experience" class="nav-link">EXPERIENCE</a></li>
+      <li><a href="#odoo" class="nav-link">ODOO HUB</a></li>
+      <li><a href="#contact" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="dot-pulse green"></span> AVAILABLE
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#skills" class="mobile-link">SKILLS</a>
+    <a href="#projects" class="mobile-link">PROJECTS</a>
+    <a href="#experience" class="mobile-link">EXPERIENCE</a>
+    <a href="#odoo" class="mobile-link">ODOO HUB</a>
+    <a href="#contact" class="mobile-link">CONTACT</a>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- HERO Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-grid">
+        <!-- Left Panel -->
+        <div class="hero-left">
+          <div class="available-badge">
+            <span class="dot-pulse green"></span> AVAILABLE FOR WORK
+          </div>
+          <h1 class="hero-name">
+            <span class="line-1" data-splitting>ABHISHEK</span>
+            <span class="line-2 gradient-text" data-splitting>PAL</span>
+          </h1>
+          <p class="hero-subtitle" id="typewriter"></p>
+          <p class="hero-micro">Python · Django · JavaScript · SQL · AWS · Redis · ClickHouse</p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="count" data-target="3">0</span>+
+              <label>Companies</label>
+            </div>
+            <div class="stat">
+              <span class="count" data-target="6">0</span>+
+              <label>Projects</label>
+            </div>
+            <div class="stat">
+              <span class="count" data-target="1">0</span>yr+
+              <label>Experience</label>
+            </div>
+            <div class="stat">
+              <span class="count" data-target="8">0</span>+
+              <label>Technologies</label>
+            </div>
+          </div>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn-primary">VIEW WORK →</a>
+            <a href="#contact" class="btn-ghost">CONTACT ME</a>
+          </div>
+        </div>
+
+        <!-- Right Panel — Terminal Widget -->
+        <div class="hero-right">
+          <div class="terminal-card glass-card">
+            <div class="terminal-traffic-lights">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green-dot"></span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="output">abhishek_pal — odoo_dev &amp; fullstack_engineer</p>
+              <p><span class="prompt">$</span> cat current_role.txt</p>
+              <p class="output">Odoo Developer @ Technosport <span class="badge-active">[ACTIVE]</span></p>
+              <p><span class="prompt">$</span> git log --oneline -3</p>
+              <p class="output git">a3f2b1c Redis + ClickHouse integration</p>
+              <p class="output git">b7e4d9a Assets Tracker Module v2</p>
+              <p class="output git">c1a8f2e Webhook Integration deployed</p>
+              <p><span class="prompt">$</span> python --skills</p>
+              <p class="output">['Odoo', 'Django', 'Python', 'SQL', 'AWS']</p>
+              <p><span class="prompt blink-cursor">█</span></p>
+            </div>
+            <div class="orbit-icons">
+              <span class="orbit-icon" style="--delay:0s">🐍</span>
+              <span class="orbit-icon" style="--delay:1.5s">⚙️</span>
+              <span class="orbit-icon" style="--delay:3s">☁️</span>
+              <span class="orbit-icon" style="--delay:4.5s">🗄️</span>
+            </div>
+          </div>
+          <!-- Three.js canvas for hero sphere -->
+          <canvas id="hero-canvas"></canvas>
+        </div>
+      </div>
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS Section -->
+    <section id="skills" class="section skills-section">
+      <div class="section-header">
+        <span class="section-tag">// 02 SKILLS</span>
+        <h2 class="section-title">TECH <span class="gradient-text">STACK</span></h2>
+        <p class="section-sub">Tools & technologies I work with daily</p>
+      </div>
+      <div class="skills-layout">
+        <div class="skills-grid" id="skills-grid"></div>
+        <div class="skills-torus-wrap">
+          <canvas id="torus-canvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS Section (Horizontal Scroll) -->
+    <section id="projects" class="section projects-section">
+      <div class="section-header">
+        <span class="section-tag">// 03 PROJECTS</span>
+        <h2 class="section-title">FEATURED <span class="gradient-text">WORK</span></h2>
+      </div>
+      <div class="projects-container" id="projects-container">
+        <div class="project-track" id="project-track"></div>
+      </div>
+      <div class="projects-progress">
+        <div class="progress-bar" id="projects-progress-bar"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE Section -->
+    <section id="experience" class="section experience-section">
+      <div class="section-header">
+        <span class="section-tag">// 04 EXPERIENCE</span>
+        <h2 class="section-title">CAREER <span class="gradient-text">JOURNEY</span></h2>
+      </div>
+      <div class="timeline-wrapper">
+        <div class="timeline-line-container">
+          <svg class="timeline-svg" id="timeline-svg" viewBox="0 0 4 400" preserveAspectRatio="none">
+            <line class="timeline-track" x1="2" y1="0" x2="2" y2="400" />
+            <line class="timeline-progress" id="timeline-progress" x1="2" y1="0" x2="2" y2="0" />
+          </svg>
+        </div>
+        <div class="timeline-cards" id="timeline-cards"></div>
+      </div>
+    </section>
+
+    <!-- ODOO HUB Section -->
+    <section id="odoo" class="section odoo-section">
+      <div class="section-header">
+        <span class="section-tag">// 05 KNOWLEDGE</span>
+        <h2 class="section-title">ODOO <span class="gradient-text">HUB</span></h2>
+        <p class="section-sub">Documentation, patterns & best practices from Odoo 17</p>
+      </div>
+      <div class="odoo-ide">
+        <aside class="odoo-sidebar" id="odoo-sidebar"></aside>
+        <main class="odoo-content" id="odoo-content"></main>
+      </div>
+    </section>
+
+    <!-- ROADMAP Section -->
+    <section id="roadmap" class="section roadmap-section">
+      <div class="section-header">
+        <span class="section-tag">// 06 ROADMAP</span>
+        <h2 class="section-title">LEARNING <span class="gradient-text">PATH</span></h2>
+        <p class="section-sub">From C++ basics to cloud-scale systems</p>
+      </div>
+      <div class="roadmap-track-container">
+        <div class="roadmap-line" id="roadmap-line"></div>
+        <div class="roadmap-nodes" id="roadmap-nodes"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT Section -->
+    <section id="contact" class="section contact-section">
+      <div class="section-header">
+        <span class="section-tag">// 07 CONTACT</span>
+        <h2 class="section-title">GET IN <span class="gradient-text">TOUCH</span></h2>
+        <p class="section-sub">Open for opportunities — let's build something great</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-cards" id="contact-cards"></div>
+        <div class="contact-form-wrap">
+          <div class="terminal-card glass-card form-terminal">
+            <div class="terminal-traffic-lights">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green-dot"></span>
+            </div>
+            <div class="terminal-header-text">// send_message.py</div>
+            <form class="terminal-form" id="contact-form" action="https://formspree.io/f/xpwprnqz" method="POST">
+              <div class="form-field">
+                <label>// NAME</label>
+                <input type="text" name="name" id="form-name" placeholder="your_name" required />
+              </div>
+              <div class="form-field">
+                <label>// EMAIL</label>
+                <input type="email" name="email" id="form-email" placeholder="your@email.com" required />
+              </div>
+              <div class="form-field">
+                <label>// MESSAGE</label>
+                <textarea name="message" id="form-message" placeholder="Write your message..." rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn-neon" id="submit-btn">
+                <span>SEND MESSAGE →</span>
+              </button>
+              <p class="form-status" id="form-status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Built with <span class="gradient-text">passion</span> by Abhishek Pal · 2025</p>
+    <p class="footer-sub">Odoo ERP Developer · Full Stack Engineer · Ghaziabad, India</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
